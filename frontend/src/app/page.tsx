@@ -15,8 +15,8 @@ interface RiskReport {
   summary: string;
 }
 
-// API Configuration
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+// API Configuration - remove trailing slash to prevent double-slash URLs
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/$/, "");
 
 // Severity badge colors
 const severityColors = {
