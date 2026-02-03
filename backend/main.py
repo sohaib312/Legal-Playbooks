@@ -115,16 +115,16 @@ def generate_embedding(text: str) -> List[float]:
 async def search_playbook_rules(query_embedding: List[float], top_k: int = 5) -> List[dict]:
     """
     Search Supabase for similar 'Market Standard' rules using pgvector.
-    Requires a function in Supabase: match_legal_playbooks
+    Requires a function in Supabase: match_legal_rules
     """
     try:
         # Call the Supabase RPC function for similarity search
         response = supabase.rpc(
-            'match_legal_playbooks',
+            'match_legal_rules',
             {
                 'query_embedding': query_embedding,
                 'match_count': top_k,
-                'match_threshold': 0.5
+                'match_threshold': 0.3
             }
         ).execute()
         
