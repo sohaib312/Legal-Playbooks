@@ -1,0 +1,14 @@
+/* Additional animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+  }
+}

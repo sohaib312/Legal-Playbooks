@@ -1,0 +1,44 @@
+# Environment files with secrets
+.env
+.env.local
+.env.production.local
+backend/.env
+frontend/.env.local
+
+# Keep example files
+!.env.example
+!.env.local.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Node.js
+node_modules/
+.next/
+out/
+.vercel
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
